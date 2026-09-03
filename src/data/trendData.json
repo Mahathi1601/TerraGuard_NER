@@ -1,0 +1,10 @@
+[
+  { "time": "06:00", "avgRisk": 38, "rainfallMm": 14, "criticalZones": 0, "alertLevel": "low" },
+  { "time": "08:00", "avgRisk": 42, "rainfallMm": 28, "criticalZones": 0, "alertLevel": "moderate" },
+  { "time": "10:00", "avgRisk": 49, "rainfallMm": 52, "criticalZones": 1, "alertLevel": "moderate" },
+  { "time": "12:00", "avgRisk": 58, "rainfallMm": 85, "criticalZones": 1, "alertLevel": "moderate" },
+  { "time": "14:00", "avgRisk": 67, "rainfallMm": 118, "criticalZones": 2, "alertLevel": "high" },
+  { "time": "16:00", "avgRisk": 74, "rainfallMm": 146, "criticalZones": 2, "alertLevel": "high" },
+  { "time": "18:00", "avgRisk": 82, "rainfallMm": 178, "criticalZones": 2, "alertLevel": "critical" },
+  { "time": "20:00 (Now)", "avgRisk": 86, "rainfallMm": 195, "criticalZones": 2, "alertLevel": "critical" }
+]

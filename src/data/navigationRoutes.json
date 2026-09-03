@@ -1,0 +1,166 @@
+[
+  {
+    "routeId": "pair-1",
+    "origin": { "name": "Guwahati Central Relief Depot", "lat": 26.1844, "lng": 91.7954 },
+    "destination": { "name": "Haflong Civil Hospital (Dima Hasao)", "lat": 25.1784, "lng": 93.0212 },
+    "routes": [
+      {
+        "id": "rt-1-safest",
+        "name": "Route A — Meghalaya Plateau Northern Bypass",
+        "mode": "safest",
+        "distanceKm": 298,
+        "etaMinutes": 380,
+        "maxRiskScore": 34,
+        "maxRiskLevel": "low",
+        "safetyScore": 96,
+        "verifiedClosures": 0,
+        "statusBadge": "safest_recommended",
+        "summary": "Bypasses all critical slide zones via northern NH-27/MDR valley alignment. 0 active closures reported.",
+        "warnings": [],
+        "sopAdvisory": "Recommended: primary corridor for heavy relief logistics and food trucks per SOP-Logistics",
+        "color": "#10b981",
+        "coordinates": [
+          [26.1844, 91.7954],
+          [26.1124, 92.1542],
+          [26.0412, 92.6514],
+          [25.9214, 93.1512],
+          [25.7512, 93.3142],
+          [25.4612, 93.2145],
+          [25.1784, 93.0212]
+        ]
+      },
+      {
+        "id": "rt-1-balanced",
+        "name": "Route B — Central Hill Arterial (NH-27 Main)",
+        "mode": "balanced",
+        "distanceKm": 224,
+        "etaMinutes": 310,
+        "maxRiskScore": 68,
+        "maxRiskLevel": "high",
+        "safetyScore": 72,
+        "verifiedClosures": 1,
+        "statusBadge": "caution_required",
+        "summary": "Faster direct route, but passes near Zubza & Jatinga high risk flanks. Single-lane slow passage.",
+        "warnings": [
+          "Warning: Pagla Pahar fissure reported 1h ago",
+          "Verification Required: SH-11 connector under review"
+        ],
+        "sopAdvisory": "Recommended: escorted convoys only; light 4x4 emergency vehicles permitted with radio check",
+        "color": "#f59e0b",
+        "coordinates": [
+          [26.1844, 91.7954],
+          [26.0124, 92.4214],
+          [25.7812, 92.7412],
+          [25.4812, 92.8912],
+          [25.2912, 92.9612],
+          [25.1784, 93.0212]
+        ]
+      },
+      {
+        "id": "rt-1-emergency",
+        "name": "Route C — Direct Mountain Pass Corridor",
+        "mode": "emergency",
+        "distanceKm": 182,
+        "etaMinutes": 240,
+        "maxRiskScore": 89,
+        "maxRiskLevel": "critical",
+        "safetyScore": 48,
+        "verifiedClosures": 1,
+        "statusBadge": "high_hazard_closure",
+        "summary": "Shortest linear corridor, but traverses directly through Jatinga Critical Zone (z1). Verified road breach at Km 84.",
+        "warnings": [
+          "CRITICAL: NH-27 Km 84 Verified Blocked (140m road washed away)",
+          "Active mudflow across carriageway"
+        ],
+        "sopAdvisory": "Warning: Civilian transit prohibited; air-bridge or specialized all-terrain rescue only per SOP-Evac",
+        "color": "#ef4444",
+        "coordinates": [
+          [26.1844, 91.7954],
+          [25.8812, 92.3124],
+          [25.5412, 92.7114],
+          [25.2412, 92.9124],
+          [25.1245, 93.0381],
+          [25.1784, 93.0212]
+        ]
+      }
+    ]
+  },
+  {
+    "routeId": "pair-2",
+    "origin": { "name": "Gangtok Emergency Base (Sikkim)", "lat": 27.3389, "lng": 88.6065 },
+    "destination": { "name": "Mangan Hospital / Chungthang Outpost", "lat": 27.5081, "lng": 88.5284 },
+    "routes": [
+      {
+        "id": "rt-2-safest",
+        "name": "Route A — Western Ridge Ridge Bypass via Ravangla",
+        "mode": "safest",
+        "distanceKm": 88,
+        "etaMinutes": 160,
+        "maxRiskScore": 28,
+        "maxRiskLevel": "low",
+        "safetyScore": 94,
+        "verifiedClosures": 0,
+        "statusBadge": "safest_recommended",
+        "summary": "Circumvents Teesta river canyon surge via stable elevated western ridge.",
+        "warnings": [],
+        "sopAdvisory": "Recommended: all supply trucks directed through Ravangla detour",
+        "color": "#10b981",
+        "coordinates": [
+          [27.3389, 88.6065],
+          [27.2841, 88.4512],
+          [27.3112, 88.3912],
+          [27.4124, 88.4214],
+          [27.5081, 88.5284]
+        ]
+      },
+      {
+        "id": "rt-2-balanced",
+        "name": "Route B — Dikchu Riverbank Spur",
+        "mode": "balanced",
+        "distanceKm": 62,
+        "etaMinutes": 115,
+        "maxRiskScore": 64,
+        "maxRiskLevel": "high",
+        "safetyScore": 70,
+        "verifiedClosures": 0,
+        "statusBadge": "caution_required",
+        "summary": "Teesta toe erosion under BRO containment; speed restricted to 20 km/h.",
+        "warnings": [
+          "Caution: Active BRO earthmoving operations at Dikchu bridge"
+        ],
+        "sopAdvisory": "Recommended: pilot car escort required for convoys",
+        "color": "#f59e0b",
+        "coordinates": [
+          [27.3389, 88.6065],
+          [27.3912, 88.5512],
+          [27.4612, 88.5312],
+          [27.5081, 88.5284]
+        ]
+      },
+      {
+        "id": "rt-2-emergency",
+        "name": "Route C — NH-10 Teesta Canyon Arterial",
+        "mode": "emergency",
+        "distanceKm": 51,
+        "etaMinutes": 90,
+        "maxRiskScore": 84,
+        "maxRiskLevel": "critical",
+        "safetyScore": 42,
+        "verifiedClosures": 1,
+        "statusBadge": "high_hazard_closure",
+        "summary": "Direct gorge highway closed due to river scouring and active scree slope failure at Dikchu-Tung.",
+        "warnings": [
+          "CRITICAL: NH-10 Verified Blocked by Teesta surge breach"
+        ],
+        "sopAdvisory": "Warning: impassable for ground transport; contact SDRF for rope bridge or heli evacuation",
+        "color": "#ef4444",
+        "coordinates": [
+          [27.3389, 88.6065],
+          [27.4212, 88.5214],
+          [27.4784, 88.5412],
+          [27.5081, 88.5284]
+        ]
+      }
+    ]
+  }
+]
