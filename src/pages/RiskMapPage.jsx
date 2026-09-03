@@ -4,7 +4,8 @@ import LandslideMap from '../components/map/LandslideMap';
 import LayerControls from '../components/map/LayerControls';
 import MapLegend from '../components/map/MapLegend';
 import ZoneDetailsDrawer from '../components/map/ZoneDetailsDrawer';
-import { Eye, Filter } from 'lucide-react';
+import CustomLocationAnalyzerModal from '../components/map/CustomLocationAnalyzerModal';
+import { Eye, Filter, Compass } from 'lucide-react';
 
 export default function RiskMapPage() {
   const {
@@ -28,6 +29,7 @@ export default function RiskMapPage() {
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [basemap, setBasemap] = useState('light');
   const [showDrawer, setShowDrawer] = useState(true);
+  const [isAnalyzerOpen, setIsAnalyzerOpen] = useState(false);
 
   const layerCounts = {
     zones: riskZones.length,
@@ -55,13 +57,23 @@ export default function RiskMapPage() {
           </span>
         </div>
 
-        {/* Quick jump to zones */}
+        {/* Custom Location Action + Quick jump to zones */}
         <div className="flex items-center gap-2 overflow-x-auto pb-0.5 max-w-full">
-          <span className="text-xs text-stone-500 shrink-0 flex items-center gap-1 font-medium">
+          {/* Analyze Custom Location Trigger */}
+          <button
+            onClick={() => setIsAnalyzerOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#5A7F8E] hover:bg-[#466674] text-white text-xs font-bold transition-all shadow-xs shrink-0"
+            title="Run on-demand multi-condition analysis for any custom location"
+          >
+            <Compass className="w-3.5 h-3.5" />
+            <span>Analyze Custom Location</span>
+          </button>
+
+          <span className="text-xs text-stone-500 shrink-0 flex items-center gap-1 font-medium ml-1">
             <Filter className="w-3.5 h-3.5 text-[#5A7F8E]" />
             Jump:
           </span>
-          {riskZones.slice(0, 5).map((z) => (
+          {riskZones.slice(0, 4).map((z) => (
             <button
               key={z.id}
               onClick={() => handleSelectZone(z)}
@@ -154,6 +166,15 @@ export default function RiskMapPage() {
           onFilterChange={setSelectedFilter}
         />
       </div>
+
+      {/* Custom Location Hazard Analyzer Modal */}
+      <CustomLocationAnalyzerModal
+        isOpen={isAnalyzerOpen}
+        onClose={() => setIsAnalyzerOpen(false)}
+        onZonePinned={(pinnedZone) => {
+          handleSelectZone(pinnedZone);
+        }}
+      />
     </div>
   );
 }

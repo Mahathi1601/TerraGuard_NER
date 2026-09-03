@@ -230,8 +230,15 @@ export function DisasterDataProvider({ children }) {
     return await WeatherService.getLiveRainfall(lat, lng);
   }, []);
 
+  // Action: dynamically pin a newly analyzed custom risk zone onto the live map session
+  const addCustomRiskZone = useCallback((newZone) => {
+    setRiskZones((prev) => [newZone, ...prev]);
+    setSelectedZoneId(newZone.id);
+  }, []);
+
   const value = {
     riskZones,
+    addCustomRiskZone,
     villages,
     roads,
     emergencies,
